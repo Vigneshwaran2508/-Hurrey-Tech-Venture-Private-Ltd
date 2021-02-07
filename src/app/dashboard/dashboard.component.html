@@ -1,0 +1,19 @@
+<p>dashboard works!</p>
+<table class="table">
+    <thead>
+        <th>School Name</th>
+        <th>Board</th>
+        <th>Medium</th>
+        <th>Class</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of dashboardArr">
+            <td>{{item.schoolName}}</td>
+            <td>{{item.board}}</td>
+            <td>{{item.medium}}</td>
+            <td>{{item.class}}</td>
+            <td><input type="checkbox"> <span>Edit</span></td>
+        </tr>
+    </tbody>
+</table>

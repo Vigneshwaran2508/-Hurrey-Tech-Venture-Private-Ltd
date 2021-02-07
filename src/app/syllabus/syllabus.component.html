@@ -1,0 +1,91 @@
+<h2><b>Syllabus</b></h2>
+<hr>
+
+<form class="row gy-2 gx-3 align-items-center">
+    <div class="col-auto">
+        <div class="input-group">
+            <h6><b>Board</b></h6>
+        </div>
+    </div>
+    <div class="col-auto">
+        <select class="form-select" id="autoSizingSelect">
+            <option selected>Select Board</option>
+            <option value="State">State</option>
+            <option value="CBSE">CBSE</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <div class="input-group">
+            <h6><b>Class</b></h6>
+        </div>
+    </div>
+    <div class="col-auto">
+        <select class="form-select" id="autoSizingSelect">
+            <option selected>select class</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">5th</option>
+            <option value="6">6th</option>
+            <option value="7">7th</option>
+            <option value="8">8th</option>
+            <option value="9">9th</option>
+            <option value="10">10th</option>
+            <option value="11">11th</option>
+            <option value="12">12th</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <div class="input-group">
+            <h6><b>Subject</b></h6>
+        </div>
+    </div>
+    <div class="col-auto">
+        <select class="form-select" id="autoSizingSelect">
+            <option selected>Select Subject</option>
+            <option value="Tamil">Tamil</option>
+            <option value="English">English</option>
+            <option value="SocialScience">Social Science</option>
+            <option value="science">Science</option>
+            <option value="maths">Maths</option>
+        </select>
+    </div>
+
+</form>
+<form class="row gy-2 gx-3 align-items-center">
+    <textarea placeholder="Syllabus descriptions"></textarea>
+
+    <div class="col-auto">
+        <div class="input-group">
+            <h6><b>Academic year</b></h6>
+        </div>
+    </div>
+    <div class="col-auto">
+        <select class="form-select" id="AcademicYears" (click)="getYears()">
+            <option>Select Years</option>
+        </select>
+    </div>
+
+    <div class="vertical-nav bg-white">
+
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw "></i>
+                    sum
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    multiple
+                </a>
+            </li>
+            <li class="nav-item">
+                <h2 class="addTopics" (click)="addTopics()">+</h2>
+            </li>
+        </ul>
+    </div>
+</form>
+

@@ -1,0 +1,14 @@
+<div id="loginForm">
+    <h2 class="text-center">Login</h2>
+    <div class="form-group">
+      <label for="exampleInputName">Name</label>
+      <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter your name" [(ngModel)]="userName">
+      <p>{{userName}}</p>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+   
+    <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+  </div>

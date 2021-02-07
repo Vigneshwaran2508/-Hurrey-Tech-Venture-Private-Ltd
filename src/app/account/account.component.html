@@ -1,0 +1,30 @@
+<p>account works!</p>
+<!-- <div>
+    <div class="col-auto">
+        <div class="dashes">Update Photo</div>
+        <input type="file" display=none>
+        <h4>Name</h4>
+        <h4>Email</h4>
+    </div>
+    <div>
+        <h4>Phone</h4>
+        <h4>UserName</h4>
+    </div>
+
+</div> -->
+<form class="row row-cols-lg-auto g-3 align-items-center">
+    <div class="dashes accountDetail" (click)="file.click()">Update Photo</div>
+    <input type="file" display=none id="photoInput" #file>
+
+    <div class="col-12 accountDetail">
+        <h4>Name</h4>
+    </div>
+
+    <div class="col-12 accountDetail">
+        <h4>Email</h4>
+    </div>
+</form>
+<div>
+    <h4>Phone</h4>
+    <h4>UserName</h4>
+</div>
