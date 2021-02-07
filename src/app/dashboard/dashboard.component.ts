@@ -37,21 +37,25 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {}
 
   search(event: Event) {
-    console.log('TO BE SEARCHED ', event.target.name, event.target.value);
+    console.log(
+      'TO BE SEARCHED ',
+      (<HTMLInputElement>event.target).name,
+      (<HTMLInputElement>event.target).value
+    );
 
-    if (event.target.value != '') {
+    if ((<HTMLInputElement>event.target).value != '') {
       this.dashboardArr = this.tempArrayHolder.filter(
         (opt) =>
-          opt[event.target.name].toLowerCase() ==
-          event.target.value.toLowerCase()
+          opt[(<HTMLInputElement>event.target).name].toLowerCase() ==
+          (<HTMLInputElement>event.target).value.toLowerCase()
       );
 
       if (this.dashboardArr.length == 0)
         this.errorMessage =
           ' ' +
-          event.target.name.toUpperCase() +
+          (<HTMLInputElement>event.target).name.toUpperCase() +
           ' with value "' +
-          event.target.value +
+          (<HTMLInputElement>event.target).value +
           '" not found.';
     } else {
       console.log('No input');
