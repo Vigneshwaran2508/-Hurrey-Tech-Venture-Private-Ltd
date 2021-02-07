@@ -1,10 +1,8 @@
 #sidebar {
   width: 20%;
   float: left;
-  background-color: rgb(63, 63, 243);
-  border-right: black;
 }
-hr{
-  width: 70%;
-  margin-top: 5%;
+
+.nav-item {
+  cursor: pointer;
 }

@@ -1,4 +1,28 @@
 #loginForm {
-  width: 60%;
+  width: 40%;
   margin: auto;
+  background-color: cadetblue;
+  height: 350px;
+  margin-top: 10%;
+  padding: 1%;
+  border-radius: 4px;
+}
+
+h2 {
+  color: white;
+}
+
+label {
+  color: beige;
+}
+
+.form-group {
+  width: 80%;
+  margin: auto;
+}
+
+button {
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 2%;
 }

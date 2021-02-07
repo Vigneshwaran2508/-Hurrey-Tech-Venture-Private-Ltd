@@ -9,12 +9,22 @@ import { DataService } from '../data.service';
 })
 export class LoginComponent implements OnInit {
   constructor(private myRouter: Router) {}
-  userName;
+  userName = '';
+  userPassword = '';
+  errorMessage;
 
   ngOnInit(): void {}
   login() {
-    console.log('USER LOGIN');
-    sessionStorage.setItem('name', this.userName);
-    this.myRouter.navigate(['/dashboard']);
+    console.log('USER LOGIN', this.userPassword, this.userName);
+    if (this.userName == '' || this.userPassword == '')
+      this.errorMessage = 'UserName and Password are required to login!';
+    else if (this.userName.length < 4 || this.userPassword.length < 4) {
+      this.errorMessage =
+        'UserName and Password are required to be minimum 4 letters length!';
+    } else {
+      this.errorMessage = '';
+      sessionStorage.setItem('name', this.userName);
+      this.myRouter.navigate(['/dashboard']);
+    }
   }
 }

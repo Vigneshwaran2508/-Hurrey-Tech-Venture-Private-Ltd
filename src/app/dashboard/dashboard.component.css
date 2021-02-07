@@ -1,4 +1,14 @@
 table {
   width: 60%;
-  margin-left: 10%;
+  background-color: ghostwhite;
+  border-color: gold;
+  margin-left: 22%;
+}
+.container {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.btn-group {
+  margin-left: 2%;
 }

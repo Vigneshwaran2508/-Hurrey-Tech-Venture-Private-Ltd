@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,12 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  loggedInName = '';
+  loggedInUrl = '';
+  constructor(private dataService: DataService) {
+    let res = this.dataService.getCredentials();
+    this.loggedInName = res.loggedInName;
+    this.loggedInUrl = res.loggedInUrl;
+  }
+
+  ngDoCheck() {
+    console.log('HIII I am in');
+    let res = this.dataService.getCredentials();
+    this.loggedInName = res.loggedInName;
+    this.loggedInUrl = res.loggedInUrl;
+  }
 
   ngOnInit(): void {}
 
   logout() {
     console.log('User logout');
-    sessionStorage.removeItem('name');
+    this.dataService.logout();
   }
 }
